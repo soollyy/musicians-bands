@@ -18,10 +18,14 @@ describe('Band and Musician Models', () => {
         // TODO - test creating a band
         const newBand = await Band.create({
             name: "campRock",
-            genre: "classical"
+            genre: "classical",
+            showCount: 5
         });
         expect(newBand.name).toBe('campRock');
         expect(newBand.genre).toBe('classical');
+        expect(newBand.showCount).toBe(5);
+
+
     })
 
     test('can create a Musician', async () => {
@@ -33,4 +37,10 @@ describe('Band and Musician Models', () => {
         expect(newMusician.name).toBe('soliana tesema');
         expect(newMusician.instrument).toBe('piano');
     })
+
+    // test('can update a Musician', async ()=> {
+    //     expect(newMusician.name).toBe('soliana tesema');
+    //     expect(newMusician.instrument).toBe('piano');
+        
+    // })
 })
